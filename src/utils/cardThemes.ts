@@ -1,0 +1,86 @@
+/**
+ * @license
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+import { CardColor } from '../types';
+
+export const CARD_COLORS: CardColor[] = [
+  {
+    id: 'white',
+    name: 'Crisp White',
+    bgClass: 'bg-white',
+    hex: '#ffffff',
+    textColor: 'text-slate-900',
+    titleColor: 'text-slate-500',
+    borderColor: 'border-slate-100',
+    dividerColor: 'border-slate-100',
+    avatarBg: 'bg-amber-50 text-amber-500',
+  },
+  {
+    id: 'cream',
+    name: 'Vanilla Cream',
+    bgClass: 'bg-[#fffdf7]',
+    hex: '#fffbeb',
+    textColor: 'text-amber-950',
+    titleColor: 'text-amber-700/70',
+    borderColor: 'border-amber-100',
+    dividerColor: 'border-amber-200/60',
+    avatarBg: 'bg-amber-100 text-amber-600',
+  },
+  {
+    id: 'blush',
+    name: 'Soft Rose',
+    bgClass: 'bg-[#fff5f5]',
+    hex: '#ffe4e6',
+    textColor: 'text-rose-950',
+    titleColor: 'text-rose-600/80',
+    borderColor: 'border-rose-100',
+    dividerColor: 'border-rose-200/60',
+    avatarBg: 'bg-rose-100 text-rose-500',
+  },
+  {
+    id: 'mint',
+    name: 'Pastel Mint',
+    bgClass: 'bg-[#f2fbf6]',
+    hex: '#dcfce7',
+    textColor: 'text-emerald-950',
+    titleColor: 'text-emerald-700/80',
+    borderColor: 'border-emerald-100',
+    dividerColor: 'border-emerald-200/60',
+    avatarBg: 'bg-emerald-100 text-emerald-600',
+  },
+  {
+    id: 'sky',
+    name: 'Sky Blue',
+    bgClass: 'bg-[#f0f8ff]',
+    hex: '#e0f2fe',
+    textColor: 'text-sky-950',
+    titleColor: 'text-sky-700/80',
+    borderColor: 'border-sky-100',
+    dividerColor: 'border-sky-200/60',
+    avatarBg: 'bg-sky-100 text-sky-600',
+  },
+  {
+    id: 'lavender',
+    name: 'Lavender Mist',
+    bgClass: 'bg-[#f8f6ff]',
+    hex: '#ede9fe',
+    textColor: 'text-purple-950',
+    titleColor: 'text-purple-700/80',
+    borderColor: 'border-purple-100',
+    dividerColor: 'border-purple-200/60',
+    avatarBg: 'bg-purple-100 text-purple-600',
+  },
+  {
+    id: 'dark',
+    name: 'Midnight Slate',
+    bgClass: 'bg-[#1e293b]',
+    hex: '#1e293b',
+    textColor: 'text-white',
+    titleColor: 'text-slate-300',
+    borderColor: 'border-slate-700',
+    dividerColor: 'border-slate-700/80',
+    avatarBg: 'bg-white text-slate-900 ring-2 ring-white/30 border-2 border-slate-200/80 shadow-md',
+  },
+];

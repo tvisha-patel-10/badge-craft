@@ -1,0 +1,7 @@
+{
+  "name": "BadgeCraft - Interactive Name Tag Playground",
+  "description": "A playful interactive name tag designer with inline editing, draggable chunky stickers, custom card colors, and exportable badges.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+
