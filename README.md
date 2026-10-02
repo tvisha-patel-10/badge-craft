@@ -1,4 +1,4 @@
-# 🪪 Badgecraft
+# 🏷️ Badgecraft
 
 > *Make your mark, literally.*
 
