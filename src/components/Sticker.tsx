@@ -218,12 +218,6 @@ export const Sticker: React.FC<StickerProps> = ({
     window.addEventListener('pointercancel', onPointerUp);
   };
 
-  // Double click to delete
-  const handleDoubleClick = (e: React.MouseEvent) => {
-    e.stopPropagation();
-    onDelete(sticker.id);
-  };
-
   // Keyboard accessibility: Arrow keys to nudge, Delete to remove, [ / ] or Shift+Arrow to rotate
   const handleKeyDown = (e: React.KeyboardEvent) => {
     // Rotation keys (reversed so left arrow rotates to the left and right arrow rotates to the right)
@@ -297,7 +291,6 @@ export const Sticker: React.FC<StickerProps> = ({
       animate={controls}
       initial={{ scale: 0.6, rotate: sticker.rotation, opacity: 1 }}
       onPointerDown={handlePointerDown}
-      onDoubleClick={handleDoubleClick}
       onKeyDown={handleKeyDown}
       className={`absolute cursor-grab active:cursor-grabbing touch-none outline-none select-none transition-shadow ${
         isDragging ? 'z-50' : ''
