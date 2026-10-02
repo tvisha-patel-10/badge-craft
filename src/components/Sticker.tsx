@@ -226,20 +226,20 @@ export const Sticker: React.FC<StickerProps> = ({
 
   // Keyboard accessibility: Arrow keys to nudge, Delete to remove, [ / ] or Shift+Arrow to rotate
   const handleKeyDown = (e: React.KeyboardEvent) => {
-    // Rotation keys
+    // Rotation keys (reversed so left arrow rotates to the left and right arrow rotates to the right)
     if (e.key === '[' || (e.shiftKey && e.key === 'ArrowLeft')) {
-      e.preventDefault();
-      onUpdateRotation(sticker.id, Math.round(sticker.rotation - 5));
-      return;
-    }
-    if (e.key === ']' || (e.shiftKey && e.key === 'ArrowRight')) {
       e.preventDefault();
       onUpdateRotation(sticker.id, Math.round(sticker.rotation + 5));
       return;
     }
+    if (e.key === ']' || (e.shiftKey && e.key === 'ArrowRight')) {
+      e.preventDefault();
+      onUpdateRotation(sticker.id, Math.round(sticker.rotation - 5));
+      return;
+    }
     if (e.key.toLowerCase() === 'r') {
       e.preventDefault();
-      onUpdateRotation(sticker.id, Math.round(sticker.rotation + 15));
+      onUpdateRotation(sticker.id, Math.round(sticker.rotation - 15));
       return;
     }
 
@@ -372,11 +372,12 @@ export const Sticker: React.FC<StickerProps> = ({
         >
           <button
             type="button"
-            title="Rotate -15°"
+            title="Rotate left"
+            aria-label="Rotate left"
             onPointerDown={(e) => e.stopPropagation()}
             onClick={(e) => {
               e.stopPropagation();
-              onUpdateRotation(sticker.id, sticker.rotation - 15);
+              onUpdateRotation(sticker.id, sticker.rotation + 15);
             }}
             className="p-1 hover:bg-slate-700 rounded-full transition-colors cursor-pointer text-slate-300 hover:text-white"
           >
@@ -385,6 +386,7 @@ export const Sticker: React.FC<StickerProps> = ({
           <button
             type="button"
             title="Reset rotation to 0°"
+            aria-label="Reset rotation to 0°"
             onPointerDown={(e) => e.stopPropagation()}
             onClick={(e) => {
               e.stopPropagation();
@@ -396,11 +398,12 @@ export const Sticker: React.FC<StickerProps> = ({
           </button>
           <button
             type="button"
-            title="Rotate +15°"
+            title="Rotate right"
+            aria-label="Rotate right"
             onPointerDown={(e) => e.stopPropagation()}
             onClick={(e) => {
               e.stopPropagation();
-              onUpdateRotation(sticker.id, sticker.rotation + 15);
+              onUpdateRotation(sticker.id, sticker.rotation - 15);
             }}
             className="p-1 hover:bg-slate-700 rounded-full transition-colors cursor-pointer text-slate-300 hover:text-white"
           >
